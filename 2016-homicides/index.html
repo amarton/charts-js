@@ -1,0 +1,132 @@
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.js'></script>
+
+<style>
+    .block {
+        width:95%;
+        max-width: 1000px;
+    }
+
+
+ 
+
+
+
+    .clear {
+        clear:both;
+        border:1px solid #cdcdcd;
+        margin-top:20px;
+    }
+
+    h2 {
+        font-size:2em;
+        font-family: sans-serif;
+    }
+
+</style>
+
+<h1>Baltimore homicides by year</h1>
+<p>The city on (Wednesday) recorded its 300th homicide for the year. Homicides in 2015 reached 344.</p>
+
+
+<div class="block">
+    <canvas id="chartOne"></canvas>
+</div>
+
+
+<p><em>*as of 12/xx/2016</em></p>
+<p><em>Source: Maryland Department of Juvenile Services</em></p>
+
+
+
+
+
+<script>
+
+var ctx = document.getElementById("chartOne");
+var chartOne = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016*"],
+        datasets: [{
+            label: 'Homicides',
+            data: [305, 304, 335, 353, 321, 325, 331, 312, 313, 305, 261, 256, 253, 270, 276, 269, 276, 282, 234, 240, 223, 197, 217, 235, 211, 344, 300],
+                      backgroundColor: [
+                '#95b6df',
+                '#95b6df',
+                '#95b6df',
+                '#95b6df',
+                '#95b6df',
+                '#95b6df',
+                '#95b6df',
+                '#95b6df',
+                '#95b6df',
+                '#95b6df',
+                '#95b6df',
+                '#95b6df',
+                '#95b6df',
+                '#95b6df',
+                '#95b6df',
+                '#95b6df',
+                '#95b6df',
+                '#95b6df',
+                '#95b6df',
+                '#95b6df',
+                '#95b6df',
+                '#95b6df',
+                '#95b6df',
+                '#95b6df',
+                '#95b6df',
+                '#95b6df',
+                '#2484c6'    
+            ],
+            borderColor: [
+                '#498fdb',
+                '#498fdb',
+                '#498fdb',
+                '#498fdb',
+                '#498fdb',
+                '#498fdb',
+                '#498fdb',
+                '#498fdb',
+                '#498fdb',
+                '#498fdb',
+                '#498fdb',
+                '#498fdb',
+                '#498fdb',
+                '#498fdb',
+                '#498fdb',
+                '#498fdb',
+                '#498fdb',
+                '#498fdb',
+                '#498fdb',
+                '#498fdb',
+                '#498fdb',
+                '#498fdb',
+                '#498fdb',
+                '#498fdb',
+                '#498fdb',
+                '#498fdb',
+                '#006aa5'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
+
+
+
+
+
+</script>
+
+

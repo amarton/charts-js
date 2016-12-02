@@ -1,0 +1,369 @@
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.js'></script>
+
+<style>
+    .block {
+        width:45%;
+    }
+        @media screen and (max-width: 600px) {
+           .block {
+                width:95%;
+            }
+        }
+
+    .right {
+        float:right;
+    }
+ 
+    .left {
+        float:left;
+    }
+       @media screen and (max-width: 600px) {
+           .right, .left {
+                float:none;
+            }
+        }
+
+
+
+    .clear {
+        clear:both;
+        border:1px solid #cdcdcd;
+        margin-top:20px;
+    }
+
+    h2 {
+        font-size:2em;
+        font-family: sans-serif;
+    }
+
+</style>
+
+
+<p> Girls come into the state's juvenile justice system with more troubled backgrounds than boys - and needing more help. But they wind up facing a double standard: girls are committed more often than boys for low-level offenses and generally are held longer than boys.</p>
+
+
+<div class="block left">
+    <h2>History of physical abuse</h2>
+    <canvas id="chartOne"></canvas>
+</div>
+
+
+<div class="block right">
+    <h2>History of sexual abuse</h2>
+    <canvas id="chartTwo"></canvas>
+</div>
+
+
+<div class="clear"></div>
+
+<div class="block left">
+    <h2>High mental health need</h2>
+    <canvas id="chartThree"></canvas>
+</div>
+
+
+<div class="block right">
+    <h2>High family-related need</h2>
+    <canvas id="chartFour"></canvas>
+</div>
+
+
+<div class="clear"></div>
+
+
+<div class="block left">
+    <h2>History of neglect</h2>
+    <canvas id="chartFive"></canvas>
+</div>
+
+
+<div class="block right">
+    <h2>Screened positive for sex trafficing (since 2013)</h2>
+    <canvas id="chartSix"></canvas>
+</div>
+
+
+<div class="clear"></div>
+
+<div class="block left">
+    <h2>Committed  for misdemeanors</h2>
+    <canvas id="chartSeven"></canvas>
+</div>
+
+
+<div class="block right">
+    <h2>Average length of stay*</h2>
+    <canvas id="chartEight"></canvas>
+</div>
+
+
+<div class="clear"></div>
+
+
+<p><em>* Data from J. DeWeese Carter Youth Center for females and Victor Cullen Center for males.</em></p>
+
+<p><em>Source: Maryland Department of Juvenile Services</em></p>
+
+
+
+
+
+<script>
+
+var ctx = document.getElementById("chartOne");
+var chartOne = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Female", "Male"],
+        datasets: [{
+            label: 'In Percents',
+            data: [24, 11, 100],
+                      backgroundColor: [
+                '#2484c6',
+                '#95b6df'
+            ],
+            borderColor: [
+                '#006aa5',
+                '#498fdb'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
+
+var ctx = document.getElementById("chartTwo");
+var chartTwo = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Female", "Male"],
+        datasets: [{
+            label: 'In Percents',
+            data: [30, 5, 100],
+                       backgroundColor: [
+                '#2484c6',
+                '#95b6df'
+            ],
+            borderColor: [
+                '#006aa5',
+                '#498fdb'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
+
+var ctx = document.getElementById("chartThree");
+var chartThree = new Chart(ctx, {
+    type: 'bar',
+    data: {
+         labels: ["Female", "Male"],
+        datasets: [{
+            label: 'In Percents',
+            data: [52, 41, 100],
+                      backgroundColor: [
+                '#2484c6',
+                '#95b6df'
+            ],
+            borderColor: [
+                '#006aa5',
+                '#498fdb'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
+
+var ctx = document.getElementById("chartFour");
+var chartFour = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Female", "Male"],
+        datasets: [{
+            label: 'In Percents',
+            data: [55, 38, 100],
+            backgroundColor: [
+                '#2484c6',
+                '#95b6df'
+            ],
+            borderColor: [
+                '#006aa5',
+                '#498fdb'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
+
+var ctx = document.getElementById("chartFive");
+var chartFive = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Female", "Male"],
+        datasets: [{
+            label: 'In Percents',
+            data: [29, 17, 100],
+            backgroundColor: [
+                '#2484c6',
+                '#95b6df'
+            ],
+            borderColor: [
+                '#006aa5',
+                '#498fdb'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
+
+
+
+var ctx = document.getElementById("chartSix");
+var chartSix = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Female", "Male"],
+        datasets: [{
+            label: 'In Numbers',
+            data: [82, 8, 100],
+                      backgroundColor: [
+                '#2484c6',
+                '#95b6df'
+            ],
+            borderColor: [
+                '#006aa5',
+                '#498fdb'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
+
+var ctx = document.getElementById("chartSeven");
+var chartSeven = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Female", "Male"],
+        datasets: [{
+            label: 'In Percents',
+            data: [83, 68, 100],
+                       backgroundColor: [
+                '#2484c6',
+                '#95b6df'
+            ],
+            borderColor: [
+                '#006aa5',
+                '#498fdb'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
+
+var ctx = document.getElementById("chartEight");
+var chartEight = new Chart(ctx, {
+    type: 'bar',
+    data: {
+         labels: ["Female", "Male"],
+        datasets: [{
+            label: 'In Days',
+            data: [201, 166],
+                      backgroundColor: [
+                '#2484c6',
+                '#95b6df'
+            ],
+            borderColor: [
+                '#006aa5',
+                '#498fdb'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+
+
+
+
+
+
+</script>
+
+
